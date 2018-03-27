@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Ss Classes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Leader</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @ss_classes.each do |ss_class| %>
+      <tr>
+        <td><%= ss_class.name %></td>
+        <td><%= ss_class.leader %></td>
+        <td><%= link_to 'Show', ss_class %></td>
+        <td><%= link_to 'Edit', edit_ss_class_path(ss_class) %></td>
+        <td><%= link_to 'Destroy', ss_class, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ss Class', new_ss_class_path %>

@@ -1,0 +1,2 @@
+class SsClass < ApplicationRecord
+end

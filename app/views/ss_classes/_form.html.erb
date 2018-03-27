@@ -1,0 +1,27 @@
+<%= form_with(model: ss_class, local: true) do |form| %>
+  <% if ss_class.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(ss_class.errors.count, "error") %> prohibited this ss_class from being saved:</h2>
+
+      <ul>
+      <% ss_class.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :ss_class_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :leader %>
+    <%= form.text_field :leader, id: :ss_class_leader %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
